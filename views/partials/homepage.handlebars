@@ -1,0 +1,18 @@
+<!-- Blog Title -->
+<h1>Betheng's Tech Blog</h1>
+
+<!-- Loop through each blog post -->
+{{#each blogs}}
+  <section class="card">
+    <a href="/blogs/{{id}}" class="card-body">
+      <!-- Blog Title -->
+      <h3 class="card-title">{{title}}</h3>
+      
+      <!-- Author and Timestamp -->
+      <h5>Posted by {{user.username}} on {{createdAt}}</h5>
+      
+      <!-- Blog Content -->
+      <p class="card-text">{{content}}</p>
+    </a>
+  </section>
+{{/each}}

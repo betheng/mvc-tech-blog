@@ -1,0 +1,74 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styles */
+  body {
+    height: 100vh;
+    background-color: azure;
+  }
+  
+  /* Header and Title Styles */
+  header, h1 {
+    background-color: #355C7D;
+    padding: 10px;
+    color: white;
+  }
+  
+  header a {
+    margin: 10px;
+    padding: 5px;
+    color: white;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: azure;
+  }
+  
+  .card-title {
+    background-color: #355C7D;
+    color: white;
+    padding: 5px;
+  }
+  
+  .card h5, .card p {
+    color: black;
+    font-style: normal;
+  }
+  
+  /* Button Styles */
+  button {
+    padding: 3px;
+    margin: 5px;
+  }
+  
+  /* Specific IDs */
+  #newpost {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  #content, #editedContent {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  
+  #create, #update, #delete {
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-top: 20px;
+  }
+  
+  #comment {
+    width: 80vw;
+    margin-top: 20px;
+  }
+  
+  #title, #editedTitle {
+    width: 80vw;
+  }  

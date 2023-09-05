@@ -1,0 +1,48 @@
+<!-- Blog Title -->
+<h1>Betheng's Tech Blog</h1>
+
+<!-- Current Blog and Comments Section -->
+<section id="currentBlogComment">
+
+  <!-- Current Blog Post -->
+  <section class="card">
+    <div class="card-body">
+      <h3 class="card-title">{{hbsBlog.title}}</h3>
+      <h5>Posted by {{hbsBlog.user.username}} on {{hbsBlog.createdAt}}</h5>
+      <p class="card-text">{{hbsBlog.content}}</p>
+    </div>
+  </section>
+
+  <!-- Loop through each comment on the current blog post -->
+  {{#each hbsBlog.comments}}
+    <section class="card">
+      <div class="card-body">
+        <p>Comment</p>
+        <p class="card-text">{{body}}</p>
+      </div>
+    </section>
+  {{/each}}
+
+</section>
+
+<!-- Comment Form Section -->
+<section class="card text-center">
+  <div class="card-body">
+    <h3 class="card-title">Comment</h3>
+    <form id="newComment">
+      <!-- Hidden input to keep track of the blog id -->
+      <input id="hiddenCommentId" type="hidden" value="{{hbsBlog.id}}">
+
+      <!-- Text area for the new comment -->
+      <div class="form-group">
+        <textarea id="comment" placeholder="Type your comment here..."></textarea>
+      </div>
+      
+      <!-- Submit button for the new comment -->
+      <button id="create">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- JavaScript File -->
+<script src="/js/comment.js"></script>

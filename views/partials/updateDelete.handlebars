@@ -1,0 +1,44 @@
+<!-- Dashboard Title -->
+<h1>Dashboard</h1>
+
+<!-- Current Blog Update Section -->
+<section id="currentBlogUpdate">
+  <!-- Current Blog Post -->
+  <section class="card">
+    <div class="card-body">
+      <h3 class="card-title">{{hbsBlog.title}}</h3>
+      <h5>Posted on {{hbsBlog.createdAt}}</h5>
+      <p class="card-text">{{hbsBlog.content}}</p>
+    </div>
+  </section>
+</section>
+
+<!-- Edit Blog Section -->
+<section id="editBlog" class="card text-center">
+  <div class="card-body">
+    <h3 class="card-title">Edit Post</h3>
+    <form id="editedBlog">
+      <!-- Title Edit -->
+      <div class="form-group">
+        <label for="editedTitle">Title</label><br>
+        <input type="text" id="editedTitle" placeholder="{{hbsBlog.title}}" value="{{hbsBlog.title}}">
+      </div>
+
+      <!-- Content Edit -->
+      <div class="form-group">
+        <label for="editedContent">Content</label>
+        <textarea id="editedContent">{{hbsBlog.content}}</textarea>
+      </div>
+      
+      <!-- Hidden Input for Blog ID -->
+      <input id="hiddenBlogId" type="hidden" value="{{hbsBlog.id}}">
+
+      <!-- Update and Delete Buttons -->
+      <button id="update">Update Post</button>
+      <button id="delete">Delete Post</button>
+    </form>
+  </div>
+</section>
+
+<!-- JavaScript File for Updating and Deleting Blog -->
+<script src="/js/updateDelete.js"></script>

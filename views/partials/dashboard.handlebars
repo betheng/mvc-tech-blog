@@ -1,0 +1,41 @@
+<!-- Dashboard Title -->
+<h1>Dashboard</h1>
+
+<!-- Existing Blogs Section -->
+<section id="existingblogs">
+    {{#each blogs}}
+    <section class="card">
+        <a href="/blogs/{{id}}" class="card-body">
+            <h3 class="card-title">{{title}}</h3>
+            <h5>Posted on {{createdAt}}</h5>
+            <p class="card-text">{{content}}</p>
+        </a>
+    </section>
+    {{/each}}
+</section>
+
+<!-- Create New Post Section -->
+<section id="createNew" class="card text-center">
+    <div class="card-body">
+        <h3 class="card-title">Create New Post</h3>
+        <form id="newBlog">
+            <div class="form-group">
+                <label for="title">Title</label><br>
+                <input type="text" id="title" placeholder="title">
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label><br>
+                <textarea id="content" placeholder="content"></textarea>
+            </div>
+            <button id="create">Create</button>
+        </form>
+    </div>
+</section>
+
+<!-- New Post Button -->
+<form id="newpost">
+    <button>+ New Post</button>
+</form>
+
+<!-- JavaScript File -->
+<script src="/js/dashboard.js"></script>
