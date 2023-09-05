@@ -1,0 +1,21 @@
+{
+  "name": "mvc-tech-blog",
+  "version": "1.0.0",
+  "description": "CMS-style blog site where developers can publish their blog posts, comment on  developers posts as well. Technologies  will be MVC architectural structure, using Handlebars.js, Sequelize, express-session npm package for authentication.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.3.1",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1"
+  }
+}
