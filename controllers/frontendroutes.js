@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 const { User, Blog, Comment } = require('../models');
 
-// Route for Home Page
+// Route for Homepage
 router.get('/', (req, res) => {
     Blog.findAll({ include: [User] })
         .then(blogs => {
             const hbsBlogs = blogs.map(blog => blog.get({ plain: true }));
             const loggedIn = req.session.user ? true : false;
-            res.render('home', { blogs: hbsBlogs, loggedIn, username: req.session.user?.username });
+            res.render('homepage', { blogs: hbsBlogs, loggedIn, username: req.session.user?.username });
         });
 });
 
